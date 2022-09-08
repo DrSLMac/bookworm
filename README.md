@@ -59,7 +59,7 @@ Use the technology you’ve been working with over the course of the module to d
 
 ## Roadmap
 Future features could include:
-- 
+- Option to join book/reading challenges
 
 ## Deployed Page
 Visit the published site [here](https://DrSLMac.github.io/Bookworm/)
