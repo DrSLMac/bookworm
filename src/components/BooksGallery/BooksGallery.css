@@ -1,0 +1,11 @@
+.main-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+    border-width: 2px;
+    border-color: 'red';
+};
+
+.main-container-text {
+    text-align: center;
+}
