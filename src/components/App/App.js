@@ -3,7 +3,11 @@ import './App.css'
 // import BooksGallery from '../BooksGallery/BooksGallery'
 // import Header from '../Header/Header'
 import { fetchBookData } from '../../apiCalls'
-import LoginPage from '../LoginPage/LoginPage'
+// import WelcomePage from '../WelcomePage/WelcomePage'
+// import Dashboard from '../Dashboard/Dashboard'
+import Header from '../Header/Header'
+import BooksGallergy from '../BooksGallery/BooksGallery'
+import NavBar from '../NavBar/NavBar'
 
 class App extends Component {
   constructor() {
@@ -27,12 +31,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <LoginPage />
-        {/* <Header />
-        <BooksGallery /> */}
+      <main>
+        
+        {/* <WelcomePage /> */}
+        <Header />
+        <NavBar />
+        <BooksGallergy />
 
-      </div>
+      </main>
     )
   }
 }

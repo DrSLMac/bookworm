@@ -1,0 +1,26 @@
+.header-container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    /* align-content: center; */
+    /* align-items: center; */
+    position: sticky;
+    top: 0;
+    background-color: blanchedalmond;
+    height: auto;
+}
+.title {
+    font-size: 4vw;
+    letter-spacing: .3em;
+    text-align: center;
+}
+.bookworm-img {
+    /* top: 0; */
+    background-color: transparent;
+    z-index: 1;
+    margin-right: 72%;
+    margin-top: -.4%;
+    position: absolute;
+    max-width: 12%;
+    height: auto;
+  }

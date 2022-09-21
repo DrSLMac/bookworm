@@ -1,0 +1,35 @@
+.welcome-page {
+    display: flex;
+    width: 100%;
+}
+.background-image {
+    align-content: center;
+    justify-content: center;
+    position:fixed;
+}
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 247, 244);
+    border-radius: 18px;
+    width: 33%;
+    height: 25vh;
+    text-align: center;
+    padding: 4vh;
+    margin: 8vh;
+    margin-left: 29.7vw;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.welcome {
+    background-color: rgb(250, 247, 244);
+}
+button {
+    align-content: center;
+    height: 8vh;
+    width: 28vw;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
