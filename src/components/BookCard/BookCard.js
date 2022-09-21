@@ -5,9 +5,6 @@ const BookCard = () => {
     return (
         <div>
             <p>This is where a book would go</p>
-            <p>This is where a book would go</p>
-            <p>This is where a book would go</p>
-            <p>This is where a book would go</p>
         </div>
 
     )

@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import './App.css'
-// import BooksGallery from '../BooksGallery/BooksGallery'
-// import Header from '../Header/Header'
 import { fetchBookData } from '../../apiCalls'
 // import WelcomePage from '../WelcomePage/WelcomePage'
-// import Dashboard from '../Dashboard/Dashboard'
 import Header from '../Header/Header'
 import BooksGallergy from '../BooksGallery/BooksGallery'
 import NavBar from '../NavBar/NavBar'
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
+
 
 class App extends Component {
   constructor() {
@@ -25,20 +24,29 @@ class App extends Component {
       this.setState({ bookLists: data.results.lists })
     })
     .catch((error) => {
-      
+      console.log(error)
+      this.setState({ error: true })
     })
   }
 
   render() {
     return (
-      <main>
-        
-        {/* <WelcomePage /> */}
-        <Header />
-        <NavBar />
-        <BooksGallergy />
+      <>
+        {this.state.error ? <div><ErrorMessage /></div> : 
+        <>
+          <main>
+            
+            {/* <WelcomePage /> */}
+            <Header />
+            <div className='main-container'>
+              <NavBar />
+              <BooksGallergy />
+            </div>
 
-      </main>
+          </main>
+        </>
+        }
+      </>
     )
   }
 }
