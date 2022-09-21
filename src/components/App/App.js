@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-// import AllBooksContainer from '../AllBooksContainer/AllBooksContainer'
+// import BooksGallery from '../BooksGallery/BooksGallery'
 // import Header from '../Header/Header'
 import { fetchBookData } from '../../apiCalls'
 import LoginPage from '../LoginPage/LoginPage'
@@ -30,7 +30,7 @@ class App extends Component {
       <div>
         <LoginPage />
         {/* <Header />
-        <AllBooksContainer /> */}
+        <BooksGallery /> */}
 
       </div>
     )

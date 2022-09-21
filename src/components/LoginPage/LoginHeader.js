@@ -5,12 +5,7 @@ import './LoginHeader.css'
 const LoginHeader = () => {
     return (
             <section className="header-container">
-                {/* <div className='bookworm-img'>
-                    <img  src={bookworm} />
-                </div> */}
-                <div>
                     <h1 className="title">BOOKWORM</h1>
-                </div>
             </section>
     )
 }
