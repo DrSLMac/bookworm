@@ -3,7 +3,7 @@ import './NavBar.css'
 
 const NavBar = () => {
     return (
-        <div>NavBar</div>
+        <div className='navbar-container'>NavBar</div>
     )
 }
 

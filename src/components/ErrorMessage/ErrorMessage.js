@@ -1,7 +1,7 @@
 import React from 'react'
 import './ErrorMessage.css'
 
-export default ErrorMessage = () => {
+const ErrorMessage = () => {
     return (
         <div className='errorMessageContainer'>
             <h2 className='error-message'>What do you call 2000 mockingbirds? Two kilo mockingbird.</h2>
@@ -9,3 +9,5 @@ export default ErrorMessage = () => {
         </div>
     )
 }
+
+export default ErrorMessage

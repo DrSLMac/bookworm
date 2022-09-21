@@ -1,11 +1,12 @@
-.main-container {
+.bookgallery-container {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    /* justify-content: flex-end; */
     width: 75%;
     border-width: 2px;
     border-color: 'red';
 };
 
-.main-container-text {
+.bookgallery-container-text {
     text-align: center;
 }
