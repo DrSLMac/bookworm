@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import './App.css'
+// import AllBooksContainer from '../AllBooksContainer/AllBooksContainer'
 // import Header from '../Header/Header'
 import { fetchBookData } from '../../apiCalls'
+import LoginPage from '../LoginPage/LoginPage'
 
 class App extends Component {
   constructor() {
@@ -25,7 +27,12 @@ class App extends Component {
 
   render() {
     return (
-      <h1>Hello World</h1>
+      <div>
+        <LoginPage />
+        {/* <Header />
+        <AllBooksContainer /> */}
+
+      </div>
     )
   }
 }

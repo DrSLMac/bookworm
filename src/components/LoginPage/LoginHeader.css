@@ -1,0 +1,17 @@
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    background-color: blanchedalmond;
+    font-family: 'Prata', serif;
+    height: 14vh;
+}
+.bookworm-img {
+    height: 4vh;
+}
+.title {
+    font-size: 3vw;
+    letter-spacing: .3em;
+}
