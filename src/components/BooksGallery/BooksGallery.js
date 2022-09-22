@@ -4,16 +4,15 @@ import BookCard from '../BookCard/BookCard'
 
 const BooksGallery = ({bookLists}) => {
     const bookShelves = bookLists.map((bookList) => {
-        console.log ("bookList: ", bookList.list_name.hardcover)
+        console.log ("bookList: ", bookList.list_name)
         const { list_id, title, list_name } = bookList
-        return (
-            <BookCard 
+        return <BookCard 
                 key={Math.random()}
                 title={title}
                 genre={list_name}
                 id={list_id}
             />
-        )
+        
     } )
     return (
         <main className='bookgallery-container'>

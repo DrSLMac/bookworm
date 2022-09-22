@@ -1,14 +1,20 @@
 import React from 'react'
+import './Dashboard.css'
 import Header from '../Header/Header'
 import NavBar from '../NavBar/NavBar'
 import BooksGallery from '../BooksGallery/BooksGallery'
 
-const Dashboard = () => {
+const Dashboard = ({bookLists}) => {
     return (
         <div>
             <Header />
-            <NavBar />
-            <BooksGallery />
+            <div className="dashboard-view">
+              
+                    <NavBar />
+             
+                    <BooksGallery bookLists={bookLists} />
+               
+            </div>
         </div>
     )
 }

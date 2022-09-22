@@ -1,10 +1,13 @@
 import React from 'react'
 import './BookCard.css'
 
-const BookCard = ({ list_id, title, list_name }) => {
+const BookCard = ({ title, genre, id }) => {
     return (
         <div>
-            <h3>{list_name}</h3>
+            <h3>Book card holder</h3>
+            <h3>{genre}</h3>
+            <h3>{id}</h3>
+            <h3>{title}</h3>
         </div>
 
     )
