@@ -3,9 +3,9 @@ import { Route } from 'react-router-dom'
 import './App.css'
 import { fetchBookData } from '../../apiCalls'
 import WelcomePage from '../WelcomePage/WelcomePage'
-// import Header from '../Header/Header'
-// import BooksGallergy from '../BooksGallery/BooksGallery'
-// import NavBar from '../NavBar/NavBar'
+import Header from '../Header/Header'
+import BooksGallergy from '../BooksGallery/BooksGallery'
+import NavBar from '../NavBar/NavBar'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 import Dashboard from '../Dashboard/Dashboard'
 
@@ -37,8 +37,10 @@ class App extends Component {
         {this.state.error ? <div><ErrorMessage /></div> : 
         <>
           <main>
-            <Route path="/" component={WelcomePage} />
-              <Route path="dashboard" component={Dashboard} />
+
+
+            <Route exact path="/" component={WelcomePage} />
+              <Route exact path="/Dashboard" render={() => <Dashboard bookLists={this.state.bookLists}/>} />
             {/* <nav>
               <NavLink to="/">
                 <article className="side-panel">
@@ -48,9 +50,9 @@ class App extends Component {
             </nav> */}
             {/* <Route path='/' component={WelcomePage}>
               <Route path='dashboard' component={Dashboard} />
-            </Route>
-            <Header />
-            <div className='main-container'>
+            </Route> */}
+            {/* <Header /> */}
+            {/* <div className='main-container'>
               <NavBar bookLists={this.state} />
               <BooksGallergy bookLists={this.state.bookLists} error={this.state.error}/>
             </div> */}
