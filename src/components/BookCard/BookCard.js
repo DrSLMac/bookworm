@@ -1,13 +1,14 @@
 import React from 'react'
 import './BookCard.css'
 
-const BookCard = ({ title, genre, id }) => {
+const BookCard = ({ author, title, bookCover, id, genre }) => {
+    // console.log('bookCover: ', bookCover)
     return (
-        <div>
-            <h3>Book card holder</h3>
+        <div className="book-card">
+            <img className="bookCover-container" src={bookCover}/>
             <h3>{genre}</h3>
-            <h3>{id}</h3>
             <h3>{title}</h3>
+            <h3>{author}</h3>
         </div>
 
     )

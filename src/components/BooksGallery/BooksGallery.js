@@ -3,20 +3,31 @@ import './BooksGallery.css'
 import BookCard from '../BookCard/BookCard'
 
 const BooksGallery = ({bookLists}) => {
+    let genreArray = []
+
     const bookShelves = bookLists.map((bookList) => {
-        console.log ("bookList: ", bookList.list_name)
-        const { list_id, title, list_name } = bookList
+        console.log('bookList: ', bookList)
+        console.log ("bookList.books: ", bookList.books[0])
+        //bookList.list_name returns the genre
+        //for each genre, create an array of the top 15 books listed for that array
+        //bookList.forEach((bookList) => {
+        // genreArray.push(bookList.list_name)
+        // console.log ("genreArray: ", genreArray)
+        // return genreArray})
+
+        const { author, title, book_image, book_uri, display_name } = bookList.books[0]
         return <BookCard 
                 key={Math.random()}
+                author={author}
                 title={title}
-                genre={list_name}
-                id={list_id}
+                bookCover={book_image}
+                genre={display_name}
+                id={book_uri}
             />
-        
     } )
+
     return (
         <main className='bookgallery-container'>
-            <h2 className="bookgallery-container-text">This is where all the books will go</h2>
             {bookShelves}
         </main>
     )

@@ -3,12 +3,9 @@ import { Route } from 'react-router-dom'
 import './App.css'
 import { fetchBookData } from '../../apiCalls'
 import WelcomePage from '../WelcomePage/WelcomePage'
-// import Header from '../Header/Header'
-// import BooksGallergy from '../BooksGallery/BooksGallery'
-// import NavBar from '../NavBar/NavBar'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 import Dashboard from '../Dashboard/Dashboard'
-
+import BookDetails from '../BookDetails/BookDetails'
 
 class App extends Component {
   constructor() {
@@ -22,7 +19,7 @@ class App extends Component {
   componentDidMount = () => {
     fetchBookData()
     .then((data) => {
-      console.log('data.results.lists: ', data.results.lists)
+      // console.log('App.js data.results.lists: ', data.results.lists)
       this.setState({ bookLists: data.results.lists })
     })
     .catch((error) => {
@@ -37,26 +34,9 @@ class App extends Component {
         {this.state.error ? <div><ErrorMessage /></div> : 
         <>
           <main>
-
-
-            <Route exact path="/" component={WelcomePage} />
+            <Route exact path="/" render={() => <WelcomePage />} />
               <Route exact path="/Dashboard" render={() => <Dashboard bookLists={this.state.bookLists}/>} />
-            {/* <nav>
-              <NavLink to="/">
-                <article className="side-panel">
-                  <h2>Search</h2>
-                </article>
-              </NavLink>
-            </nav> */}
-            {/* <Route path='/' component={WelcomePage}>
-              <Route path='dashboard' component={Dashboard} />
-            </Route> */}
-            {/* <Header /> */}
-            {/* <div className='main-container'>
-              <NavBar bookLists={this.state} />
-              <BooksGallergy bookLists={this.state.bookLists} error={this.state.error}/>
-            </div> */}
-
+              <Route exact path="/BookDetails" render={() => <BookDetails />} />
           </main>
         </>
         }

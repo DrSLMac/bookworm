@@ -1,12 +1,8 @@
 .bookgallery-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
     width: 75%;
-    border-width: 2px;
-    border-color: 'red';
+    align-content: space-around;
 };
-
-.bookgallery-container-text {
-    text-align: center;
-}
