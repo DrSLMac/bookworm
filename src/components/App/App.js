@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-// import { NavLink, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css'
 import { fetchBookData } from '../../apiCalls'
 import WelcomePage from '../WelcomePage/WelcomePage'
-import Header from '../Header/Header'
-import BooksGallergy from '../BooksGallery/BooksGallery'
-import NavBar from '../NavBar/NavBar'
+// import Header from '../Header/Header'
+// import BooksGallergy from '../BooksGallery/BooksGallery'
+// import NavBar from '../NavBar/NavBar'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
+import Dashboard from '../Dashboard/Dashboard'
 
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
     super()
     this.state={
       bookLists: [],
-      error: false
+      error: false,
     }
   }
 
@@ -36,17 +37,21 @@ class App extends Component {
         {this.state.error ? <div><ErrorMessage /></div> : 
         <>
           <main>
-            <nav>
-              {/* <NavLink to="/">
+            <Route path="/" component={WelcomePage} />
+              <Route path="dashboard" component={Dashboard} />
+            {/* <nav>
+              <NavLink to="/">
                 <article className="side-panel">
                   <h2>Search</h2>
                 </article>
-              </NavLink> */}
-            </nav>
-            <WelcomePage />
+              </NavLink>
+            </nav> */}
+            {/* <Route path='/' component={WelcomePage}>
+              <Route path='dashboard' component={Dashboard} />
+            </Route>
             <Header />
-            {/* <div className='main-container'>
-              <NavBar bookLists={this.state.bookLists} />
+            <div className='main-container'>
+              <NavBar bookLists={this.state} />
               <BooksGallergy bookLists={this.state.bookLists} error={this.state.error}/>
             </div> */}
 

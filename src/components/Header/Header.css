@@ -1,37 +1,37 @@
 .dashboard-header-container {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    border: .5px solid gray;
-    position: sticky;
-    top: 0;
-    background-color: blanchedalmond;
-    height: auto;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  border: .5px solid gray;
+  position: sticky;
+  top: 0;
+  background-color: blanchedalmond;
+  height: auto;
 }
 .title {
-    /* margin-top: 6%; */
-    font-size: 4vw;
-    letter-spacing: .3em;
-    text-align: center;
+  /* margin-top: 6%; */
+  font-size: 4vw;
+  letter-spacing: .3em;
+  text-align: center;
 }
 .bookworm-img {
-    /* top: 0; */
-    background-color: transparent;
-    z-index: 1;
-    margin-right: 72%;
-    /* margin-top: 1.1%; */
-    position: absolute;
-    max-width: 12%;
-    height: auto;
-  }
-  .bookshelf-img {
-    /* top: 0; */
-    /* background-color: transparent; */
-    z-index: 1;
-    margin-left: 70%;
-    margin-top: 2%;
-    position: absolute;
-    max-width: 23%;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 45px 20px -20px;
-  }
+  /* top: 0; */
+  background-color: transparent;
+  z-index: 1;
+  margin-right: 72%;
+  /* margin-top: 1.1%; */
+  position: absolute;
+  max-width: 12%;
+  height: auto;
+}
+.bookshelf-img {
+  /* top: 0; */
+  /* background-color: transparent; */
+  z-index: 1;
+  margin-left: 70%;
+  margin-top: 2%;
+  position: absolute;
+  max-width: 23%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 45px 20px -20px;
+}

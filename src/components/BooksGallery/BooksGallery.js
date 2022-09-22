@@ -11,7 +11,7 @@ const BooksGallery = ({bookLists}) => {
                 key={Math.random()}
                 title={title}
                 genre={list_name}
-
+                id={list_id}
             />
         )
     } )

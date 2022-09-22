@@ -1,5 +1,11 @@
+.errorMessageContainer {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    text-align: center;
+    margin-top: 14vh;
+}
 .error-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 2vw;
+    /* padding: 10vh 10vw; */
 }
