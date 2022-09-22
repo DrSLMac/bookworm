@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { NavLink, Route } from 'react-router-dom'
+// import { NavLink, Route } from 'react-router-dom'
 import './App.css'
 import { fetchBookData } from '../../apiCalls'
-// import WelcomePage from '../WelcomePage/WelcomePage'
+import WelcomePage from '../WelcomePage/WelcomePage'
 import Header from '../Header/Header'
 import BooksGallergy from '../BooksGallery/BooksGallery'
 import NavBar from '../NavBar/NavBar'
@@ -37,18 +37,18 @@ class App extends Component {
         <>
           <main>
             <nav>
-              <NavLink to="/">
+              {/* <NavLink to="/">
                 <article className="side-panel">
                   <h2>Search</h2>
                 </article>
-              </NavLink>
-              <NavBar bookLists={this.state} />
+              </NavLink> */}
             </nav>
-            {/* <WelcomePage /> */}
+            <WelcomePage />
             <Header />
-            <div className='main-container'>
+            {/* <div className='main-container'>
+              <NavBar bookLists={this.state.bookLists} />
               <BooksGallergy bookLists={this.state.bookLists} error={this.state.error}/>
-            </div>
+            </div> */}
 
           </main>
         </>
