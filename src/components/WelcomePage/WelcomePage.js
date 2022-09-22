@@ -14,7 +14,8 @@ const WelcomePage = () => {
                 <WelcomeHeader />
                 <div className="welcome-container">
                     <h1 className="welcome">Welcome!</h1>
-                    <button>Click here to enter the book gallery</button>
+                    <a href="/" className="welcome-button">Click here to enter the book gallery</a>
+                    {/* <button>Click here to enter the book gallery</button> */}
                 </div>
             </div>
         </div>
