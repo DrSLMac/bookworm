@@ -4,7 +4,8 @@
 
 **Describe the changes made to the codebase:**
 - [ ] New feature (adds functionality)
-- [ ] Descrobe the purpose of this PR (other):
+- [ ] Describe the purpose of this PR (other):
+- [ ] Added screenshots/videos where applicable:
 
 **How was it tested?**
 - [ ] I tested my changes in the browser

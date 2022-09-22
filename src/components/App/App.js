@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink, Route } from 'react-router-dom'
 import './App.css'
 import { fetchBookData } from '../../apiCalls'
 // import WelcomePage from '../WelcomePage/WelcomePage'
@@ -35,12 +36,18 @@ class App extends Component {
         {this.state.error ? <div><ErrorMessage /></div> : 
         <>
           <main>
-            
+            <nav>
+              <NavLink to="/">
+                <article className="side-panel">
+                  <h2>Search</h2>
+                </article>
+              </NavLink>
+              <NavBar bookLists={this.state} />
+            </nav>
             {/* <WelcomePage /> */}
             <Header />
             <div className='main-container'>
-              <NavBar />
-              <BooksGallergy />
+              <BooksGallergy bookLists={this.state.bookLists} error={this.state.error}/>
             </div>
 
           </main>
