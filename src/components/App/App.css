@@ -1,0 +1,12 @@
+* {
+  background-color: blanchedalmond;
+}
+.App {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.main-container {
+  display: flex;
+  width: 100%;
+}
