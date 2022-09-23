@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+![Bookworm-banner](https://user-images.githubusercontent.com/102887963/189165334-44a72f86-54cc-4da2-a8a7-87fab7ff652f.png)
+## Table of Contents 📖
+- [Introduction](#introduction)
+- [Learning Goals](#learning-goals)
+- [Technologies and Tools](#technologies-and-tools)
+- [Illustrations & Demo](#illustrations-and-demo)
+- [Project Reflections](#project-reflections)
+- [Roadmap](#roadmap)
+- [Deployed Page](#deployed-page)
+- [Set Up](#set-up)
+- [Contributors](#contributors)
+- [Sources](#sources)
+- [Project Specs](#project-specs)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+- The purpose of the project was to implement a React framework, utilize React Router, and perform End-to-End testing using Cypress. 
 
-## Available Scripts
+## Learning Goals
+Use the technology you’ve been working with over the course of the module to demonstrate mastery of the following:
+- React
+- Router
+- Asynchronous JavaScript
+- End to end testing with Cypress
 
-In the project directory, you can run:
+## Technologies and Tools
+- Javascript
+- HTML
+- CSS
+- npm
+- Node.js
+- React
+- Router
+- Cypress Testing
+- RESTful API
+- GitHub Projects
+- GitHub Issues
 
-### `npm start`
+## Illustrations and Demo
+#### Login Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+----
+#### Dashboard View
 
-### `npm test`
+----
+#### Filter Feature
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+----
+#### Single Book Details View
 
-### `npm run build`
+----
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Reflections
+#### Wins
+- 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Challenges
+- 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Roadmap
+Future features could include:
+- Option to join book/reading challenges
 
-### `npm run eject`
+## Deployed Page
+Visit the published site [here](https://DrSLMac.github.io/Bookworm/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Set Up
+1. Fork this repo
+2. Clone the repo to your local machine
+3. `cd` into the root of the project directory
+4. Run `npm install`
+5. Run `npm start`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributors
+ Shauna MacFarlane-Okongo
+ - [LinkedIn](https://github.com/DrSLMac)
+ - [GitHub](https://github.com/DrSLMac)
+ 
+## Sources
+ - [MDN](http://developer.mozilla.org/en-US/)
+ - [YouTube](https://www.youtube.com/)
+ - [W3Schools](https://www.w3schools.com/)
+ - [Heroku cloud PaaS](https://heroku.com/)
+ - [Router docs](https://reactrouter.com/)
+ - [Cypress docs](https://docs.cypress.io/guides/overview/why-cypress)
+ - [Medium](https://medium.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Specs
+ - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
