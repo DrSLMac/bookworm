@@ -1,4 +1,4 @@
-.book-card-container {
+/* .book-card-container {
     width: 16vw;
 	height: 24vh;
     margin: 2vh;
@@ -71,7 +71,7 @@
 }
 /* does this make a difference?? */
 
-.description-box {
+/* .description-box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -112,4 +112,4 @@
   .current-rank {
 	margin-bottom: .3vh;
 	margin-top: .2vh;
-  }
+  } */

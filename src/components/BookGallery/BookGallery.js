@@ -5,22 +5,21 @@ import BookCard from '../BookCard/BookCard'
 const BookGallery = ({bookLists}) => {
 
     const bookShelves = bookLists.map((bookList) => {
-        console.log('bookList: ', bookList)
-        console.log ("bookList.books: ", bookList.books[0])
-        //bookList.list_name returns the genre
-        //for each genre, create an array of the top 15 books listed for that array
-        //bookList.forEach((bookList) => {
-        // genreArray.push(bookList.list_name)
-        // console.log ("genreArray: ", genreArray)
-        // return genreArray})
-
-        const { author, title, book_image, book_uri, display_name } = bookList.books[0]
+        console.log('bookList: ', bookList.list_name)
+        // console.log ("bookList.books: ", bookList.books[0])
+        bookList.list_name = []
+      
+        //if bookList.list_name === bookList.display_name
+        const { author, title, book_image, book_uri, rank, description, publisher } = bookList.books[0]
         return <BookCard 
                 key={Math.random()}
                 author={author}
                 title={title}
                 bookCover={book_image}
-                genre={display_name}
+                genre={bookList.display_name}
+                rank={rank}
+                description={description}
+                publisher={publisher}
                 id={book_uri}
             />
     } )

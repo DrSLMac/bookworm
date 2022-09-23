@@ -11,10 +11,10 @@ const BookCard = ({ author, title, bookCover, id, genre, rank, publisher, descri
 
             <div className='description-box'>    
                 <p className='title'>{title}</p>
-                <p className='author'>{author}</p>
-                <p className='genra'>{genre}</p>
-                <p className='current-'>NY Times Current Rank: {rank}</p>
-                <p className='description'>{description}</p>
+                <p className='author'>Author: {author}</p>
+                <p className='genra'>Genre: {genre}</p>
+                <p className='current-'>NY Times Current Rank: #{rank}</p>
+                <p className='description'>Description: {description}</p>
                 <p className='info-publishing'>Publisher: {publisher}</p>
             </div>
 
