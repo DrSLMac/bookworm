@@ -9,9 +9,7 @@ const Dashboard = ({bookLists}) => {
         <div>
             <Header />
             <div className="dashboard-view">
-              
                     <NavBar />
-             
                     <BookGallery bookLists={bookLists} />
                
             </div>

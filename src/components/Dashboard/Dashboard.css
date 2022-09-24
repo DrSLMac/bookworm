@@ -1,4 +1,7 @@
 .dashboard-view {
     display: flex;
+    background-color: blanchedalmond;
+    z-index: -1;
+    height: 110vh;
     /* flex-direction: column; */
 }

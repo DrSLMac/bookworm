@@ -11,7 +11,7 @@ console.log('genreArray: ', genreArray)
 
     const bookShelves = bookLists.map((bookList) => {
         console.log('bookList: ', bookList.list_name)
-        let genre = []
+        // let genre = []
         genreArray.map(genre => {
             console.log('genre: ', genre)
             genre = []
@@ -50,7 +50,7 @@ console.log('genreArray: ', genreArray)
 
     return (
         <section className='bookgallery-container'>
-            <article className='genre-bookshelf'>
+            <article className='books-container'>
                 {/* <h2>{genreBookShelf}</h2> */}
                 {bookShelves}
             </article>

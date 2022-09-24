@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <section className="dashboard-header-container">
             <img className='bookworm-img' src={bookworm} alt='bookworm cartoon'/>
-            <h1 className="title">BOOKWORM</h1>
+            <h1 className="header-title">BOOKWORM</h1>
             <img className='bookshelf-img' src={bookshelf} alt='vintage bookshelf with books' />
         </section>
     )
