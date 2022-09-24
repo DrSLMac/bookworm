@@ -20,11 +20,12 @@
 }
 
 .bookworm-img {
+  position: absolute;
   margin-right: -71vw;
   /* margin-left: 3vw; */
   margin-top: 1vh;
   /* position: relative; */
-  max-width: 10vw;
+  max-width: 11vw;
   /* height: auto; */
 }
 .bookshelf-img {
