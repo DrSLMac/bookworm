@@ -1,7 +1,5 @@
 .navbar-container {
-    /* background-color: blanchedalmond; */
-    z-index: -1;
     width: 20%;
-    height: 90vh;
     border: .5px solid gray;
+    text-align: center;
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import './BookGallery.css'
 import BookCard from '../BookCard/BookCard'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 
 const BookGallery = ({bookLists}) => {
     const genreArray = []
@@ -9,31 +11,34 @@ const BookGallery = ({bookLists}) => {
     })
 console.log('genreArray: ', genreArray)
 
+let genreBooks = []
+const genreBookshelf = genreArray.map(genre => {
+    bookLists.forEach(bookList => {
+        if (bookList.list_name === genre) {
+            genreBooks.push(bookList.books)
+    }
+    return genreBooks
+    })
+})
+console.log('genreBooks(array of books for each genre): ', genreBooks)
+
+
     const bookShelves = bookLists.map((bookList) => {
-        console.log('bookList: ', bookList.list_name)
-        // let genre = []
-        genreArray.map(genre => {
-            console.log('genre: ', genre)
-            genre = []
-            if (bookList.list_name === genre) {
-                genre.push()
-            }
-        })
-        // console.log ("bookList.books: ", bookList.books[0])
-        //if bookList.list_name === bookList.display_name
         const { author, title, book_image, book_uri, rank, description, publisher } = bookList.books[0]
         return <BookCard 
-                key={Math.random()}
-                author={author}
-                title={title}
-                bookCover={book_image}
-                genre={bookList.display_name}
-                rank={rank}
-                description={description}
-                publisher={publisher}
-                id={book_uri}
-            />
+        key={Math.random()}
+        author={author}
+        title={title}
+        bookCover={book_image}
+        genre={bookList.display_name}
+        rank={rank}
+        description={description}
+        publisher={publisher}
+        id={book_uri}
+        />
     } )
+    
+    console.log('bookShelves: ', bookShelves)
 
 //     const genreBookShelf = bookLists.reduce((genreArray, bookList) => {
 //         bookList.forEach((genre) => {
@@ -51,8 +56,17 @@ console.log('genreArray: ', genreArray)
     return (
         <section className='bookgallery-container'>
             <article className='books-container'>
-                {/* <h2>{genreBookShelf}</h2> */}
-                {bookShelves}
+            <Swiper 
+            spaceBetween={50}
+            slidesPerView={3}
+            onslideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log('swiper')}
+            >
+                <SwiperSlide>{bookShelves}</SwiperSlide>
+            </Swiper>
+                
+                {/* <h2>{genreArray}</h2> */}
+                {/* {bookShelves} */}
             </article>
         </section>
     )
