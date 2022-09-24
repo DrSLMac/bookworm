@@ -5,6 +5,24 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 
 const BookGallery = ({bookLists}) => {
+    
+    const bookShelves = bookLists.map((bookList) => {
+        console.log('bookList: ', bookList)
+        const { author, title, book_image, book_uri, rank, description, publisher } = bookList.books[0]
+        return <BookCard 
+        key={Math.random()}
+        author={author}
+        title={title}
+        bookCover={book_image}
+        genre={bookList.display_name}
+        rank={rank}
+        description={description}
+        publisher={publisher}
+        id={book_uri}
+        />
+    } )
+    console.log('bookShelves: ', bookShelves)
+
     const genreArray = []
         bookLists.forEach((bookList) => {
         genreArray.push(bookList.list_name)
@@ -21,24 +39,6 @@ const genreBookshelf = genreArray.map(genre => {
     })
 })
 console.log('genreBooks(array of books for each genre): ', genreBooks)
-
-
-    const bookShelves = bookLists.map((bookList) => {
-        const { author, title, book_image, book_uri, rank, description, publisher } = bookList.books[0]
-        return <BookCard 
-        key={Math.random()}
-        author={author}
-        title={title}
-        bookCover={book_image}
-        genre={bookList.display_name}
-        rank={rank}
-        description={description}
-        publisher={publisher}
-        id={book_uri}
-        />
-    } )
-    
-    console.log('bookShelves: ', bookShelves)
 
 //     const genreBookShelf = bookLists.reduce((genreArray, bookList) => {
 //         bookList.forEach((genre) => {
@@ -59,10 +59,15 @@ console.log('genreBooks(array of books for each genre): ', genreBooks)
             <Swiper 
             spaceBetween={50}
             slidesPerView={3}
-            onslideChange={() => console.log('slide change')}
+            onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log('swiper')}
             >
-                <SwiperSlide>{bookShelves}</SwiperSlide>
+                <SwiperSlide>1</SwiperSlide>
+                <SwiperSlide>2</SwiperSlide>
+                <SwiperSlide>3</SwiperSlide>
+                <SwiperSlide>4</SwiperSlide>
+                <SwiperSlide>5</SwiperSlide>
+                {/* <SwiperSlide>{bookShelves}</SwiperSlide> */}
             </Swiper>
                 
                 {/* <h2>{genreArray}</h2> */}
