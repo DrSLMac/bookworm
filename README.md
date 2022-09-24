@@ -80,10 +80,11 @@ Visit the published site [here](https://DrSLMac.github.io/Bookworm/)
  - [MDN](http://developer.mozilla.org/en-US/)
  - [YouTube](https://www.youtube.com/)
  - [W3Schools](https://www.w3schools.com/)
- - [Heroku cloud PaaS](https://heroku.com/)
+ - [React JS](https://reactjs.org/)
  - [Router docs](https://reactrouter.com/)
  - [Cypress docs](https://docs.cypress.io/guides/overview/why-cypress)
  - [Medium](https://medium.com/)
+ - [CSS Book Animation](https://devsnap.me/css-book-effects)
 
 ## Project Specs
  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
