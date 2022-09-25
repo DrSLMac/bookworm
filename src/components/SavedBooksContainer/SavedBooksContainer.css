@@ -1,0 +1,35 @@
+.saved-nav-gal {
+    display: flex;
+    height: auto;
+    
+    background-color: blanchedalmond;
+    z-index: -1;
+    /* flex-direction: column; */
+}
+
+.savedBooksGalleryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.savedBooksGallery {
+    z-index: 0;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    width: 100%;
+};
+
+  .savedNavBar {
+    width: 20em;
+    height: auto;
+  }
+
+  .saved-books-title {
+    text-align: center;
+    margin-top: .5em;
+  }
+
