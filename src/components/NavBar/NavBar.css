@@ -1,5 +1,6 @@
 .navbar-container {
-    width: 20%;
+    z-index: 1;
+    width: 30em;
     border: .5px solid gray;
     text-align: center;
 }

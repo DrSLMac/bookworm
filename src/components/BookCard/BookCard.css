@@ -7,7 +7,7 @@
 	transition: 1s;
 }
 .book-card:hover {
-	transform: translate(-2%,-2%) perspective(2000px) rotate(-2deg) scale(1.2);
+	transform: translate(-2%,-2%) perspective(2000px) rotate(-1deg) scale(1.2);
 	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
 	z-index: 1;
 }
