@@ -19,8 +19,7 @@ const WelcomePage = () => {
                     <nav>
                         <NavLink to="/Dashboard" className="welcome-button">Click here to enter the book gallery</NavLink>
                     </nav>
-                    {/* <Route path="/Dashboard" component={Dashboard} /> */}
-                    {/* <button>Click here to enter the book gallery</button> */}
+           
                 </div>
             </div>
         </div>
