@@ -1,8 +1,8 @@
 .navbar-container {
     z-index: 0;
     background-color: blanchedalmond;
-    width: 30em;
-    height: auto;
+    width: 20em;
+    height: 100;
     border: .5px solid gray;
     text-align: center;
 }

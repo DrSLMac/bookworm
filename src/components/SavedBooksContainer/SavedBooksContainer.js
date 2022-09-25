@@ -24,8 +24,15 @@ const SavedBooksContainer = ({ savedBooks }) => {
         return (
         <div>
             <Header />
-            <NavBar />
-            {savedBookShelf}
+            <div className='saved-nav-gal'>
+                <NavBar className="savedNavBar"/>
+                <div className='savedBooksGalleryContainer' >
+                        <h2 className='saved-books-title'>Saved Books</h2>
+                        <div className='savedBooksGallery'>
+                            {savedBookShelf}
+                        </div>
+                </div>
+            </div>
         </div>
         )
     }

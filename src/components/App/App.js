@@ -64,7 +64,11 @@ class App extends Component {
               saveBook={this.saveBook}
               />} />
 
-            <Route exact path="/SavedBooksSection" render={() => <SavedBooksContainer savedBooks={this.state.savedBooks}/>} />
+            <Route exact path="/SavedBooksSection" render={() => <SavedBooksContainer 
+            savedBooks={this.state.savedBooks}
+            filteredBooks={this.filteredBooks}
+            filteredBookLists={this.state.filteredBookLists}/>} />
+            
           </nav>
         </>
         }
