@@ -6,38 +6,42 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
-import { Parallax, Navigation, Mousewheel, Keyboard } from "swiper";
+import { Navigation } from "swiper";
 
 
-const BookGallery = ({bookLists}) => {
+const BookGallery = ({bookLists, filteredBookLists, saveBook}) => {
+    // console.log('saveBook in bookGallery: ', saveBook )
     const bookShelves = bookLists.reduce((object, currentList) => {
         if(!object[currentList.list_name]) {
             object[currentList.list_name] = currentList.books
         }
         return object
     },{})
-    console.log('bookShelves: ', bookShelves)
-    // const genres = Object.keys(bookShelves)
-    // console.log('genres: ', genres)
-    // const genreBooks = genres.map(genre => {
-    //     const readingMaterial = bookShelves[genre].map((book) => {
-    //         const { author, title, book_image, book_uri, rank, description, publisher } = book
-    //                 return <BookCard 
-    //                     key={Math.random()}
-    //                     author={author}
-    //                     title={title}
-    //                     bookCover={book_image}
-    //                     genre={genre}
-    //                     rank={rank}
-    //                     description={description}
-    //                     publisher={publisher}
-    //                     id={book_uri}
-    //                     />
-    //     })
-    //     return readingMaterial
-    // })
-const getBooksByGenre = (genre) => {
-    if (bookShelves.hasOwnProperty(genre)) {
+
+    const filteredBookShelves = filteredBookLists.map(filteredBooks => {
+        const filteredBookSet = filteredBooks.books.map(book => {
+            // console.log('book: ', book.author)
+            const { author, title, book_image, book_uri, rank, description, publisher } = book
+                        return <BookCard 
+                            key={Math.random()}
+                            author={author}
+                            title={title}
+                            bookCover={book_image}
+                            // genre={filteredBookLists[0].list_name}
+                            rank={rank}
+                            description={description}
+                            publisher={publisher}
+                            id={book_uri}
+                            saveBook={saveBook}
+                            />
+        })
+        return filteredBookSet
+    })
+    console.log('filteredBookShelves: ', filteredBookShelves)
+
+    const genres = Object.keys(bookShelves)
+    console.log('genres: ', genres)
+    const allBooks = genres.map(genre => {
         const readingMaterial = bookShelves[genre].map((book) => {
             const { author, title, book_image, book_uri, rank, description, publisher } = book
                     return <BookCard 
@@ -50,155 +54,123 @@ const getBooksByGenre = (genre) => {
                         description={description}
                         publisher={publisher}
                         id={book_uri}
+                        saveBook={saveBook}
                         />
         })
         return readingMaterial
-    }
-}
+    })
 
-    return (
+
+
+return (
         <section className='bookgallery-container'>
-            <article className='books-container'>
-        <div>
-            {/* <div className="movie-container-backdrop"></div> */}
-                <div className='top-swiper-container'>
-                    <Swiper
-                        style={{
-                            "--swiper-navigation-color": "#fff",
-                            "--swiper-pagination-color": "#fff",
-                        }}
-                        speed={600}
-                        parallax={true}
-                        navigation={true}
-                        modules={[Parallax, Navigation, Mousewheel, Keyboard]}
-                        className="my-swiper"
-                        slidesPerView={10}
-                        slidesPerGroup={5}
-                        spaceBetween={5}
-                        cssMode={true}
-                        mousewheel={true}
-                        keyboard={true}
-                        key={1}
-                        >   
-                        <div slot="container-start" className="parallax-bg" data-swiper-parallax="-23%"></div> 
-                        {getBooksByGenre("Combined Print and E-Book Fiction")} 
-                    </Swiper>
-                </div>
-
-        {/* <div className='bottom-swiper-container'>
-          <Swiper
-          style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
-          }}
-          speed={600}
-          parallax={true}
-          navigation={true}
-          modules={[Parallax, Navigation, Mousewheel, Keyboard]}
-          className="my-swiper2"
-          slidesPerView={10}
-          slidesPerGroup={5}
-          spaceBetween={5}
-          cssMode={true}
-          mousewheel={true}
-          keyboard={true}
-          key={2}
-          >   
-            <div slot="container-start" className="parallax-bg2" data-swiper-parallax="-23%"></div> 
-            {getBooksByGenre("Combined Print and E-Book Nonfiction")}  
-          </Swiper>
-        </div> */}
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-            {/* <div className='genre-container'>Combined Print and E-Book Fiction:
-                <Swiper 
-                 speed={600}
-                 parallax={true}
-                 navigation={true}
-                 modules={[Parallax, Navigation, Mousewheel, Keyboard]}
-                 slidesPerView={10}
-                 slidesPerGroup={5}
-                 spaceBetween={5}
-                 cssMode={true}
-                 mousewheel={true}
-                 keyboard={true}
-                 key={1}
-                className='genre-carousel'>
-                    <SwiperSlide>{getBooksByGenre("Combined Print and E-Book Fiction")}</SwiperSlide>
-                </Swiper>    
-            </div>
-            <Swiper navigation={true} modules={[Navigation]} className='genre-carousel'>
-                <SwiperSlide>Combined Print and E-Book Nonfiction: {getBooksByGenre("Combined Print and E-Book Nonfiction")}</SwiperSlide>
-            </Swiper> */}
-            
-            {/* <Swiper className='genre-carousel'>
-                <SwiperSlide>Hardcover Fiction: {getBooksByGenre("Hardcover Fiction")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Trade Fiction Paperback: {getBooksByGenre("Trade Fiction Paperback")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Paperback Nonfiction: {getBooksByGenre("Paperback Nonfiction")}</SwiperSlide>
-            </Swiper> */}
-
-            {/* <Swiper className='genre-carousel'>
-                <SwiperSlide>Advice How-To and Miscellaneous: {getBooksByGenre("Advice How-To and Miscellaneous")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Childrens Middle Grade Hardcover: {getBooksByGenre("Childrens Middle Grade Hardcover")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Picture Books: {getBooksByGenre("Picture Books")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Series Books: {getBooksByGenre("Series Books")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Young Adult Hardcover: {getBooksByGenre("Young Adult Hardcover")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Audio Fiction: {getBooksByGenre("Audio Fiction")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Audio Nonfiction: {getBooksByGenre("Audio Nonfiction")}</SwiperSlide>
-            </Swiper> */}
-
-
-            {/* <Swiper className='genre-carousel'>
-                <SwiperSlide>Business Books: {getBooksByGenre("Business Books")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Graphic Books and Manga: {getBooksByGenre("Graphic Books and Manga")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Mass Market Monthly: {getBooksByGenre("Mass Market Monthly")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Middle Grade Paperback Monthly: {getBooksByGenre("Middle Grade Paperback Monthly")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>
-                <SwiperSlide>Young Adult Paperback Monthly: {getBooksByGenre("Young Adult Paperback Monthly")}</SwiperSlide>
-            </Swiper>
-            <Swiper className='genre-carousel'>    
-                <SwiperSlide>Hardcover Nonfiction: {getBooksByGenre("Hardcover Nonfiction")}</SwiperSlide>
-            </Swiper> */}
-
-            </article>
+            {filteredBookLists.length !== 0 ? filteredBookShelves : allBooks}
         </section>
+
+
+    // {this.state.searchQuery === '' ? movieCards : filteredMovies}
+    // {filteredMovies.length === 0 && <h2>Sorry there are no movies with that title, please try again🥲</h2>}
+
+
+
+
+
+
+
+/* 
+            <div className='genre-carousel'>Hardcover Nonfiction: 
+                <Swiper navigation={true} modules={[Navigation]}>    
+                    <SwiperSlide>{getBooksByGenre("Hardcover Nonfiction")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Trade Fiction Paperback: 
+                <Swiper navigation={true} modules={[Navigation]} >
+                    <SwiperSlide>{getBooksByGenre("Trade Fiction Paperback")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Paperback Nonfiction: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Paperback Nonfiction")}</SwiperSlide>
+                </Swiper>
+            </div> */
+
+            /* <div className='genre-carousel'>Advice How-To and Miscellaneous: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Advice How-To and Miscellaneous")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel' >Childrens Middle Grade Hardcover: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Childrens Middle Grade Hardcover")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Picture Books: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Picture Books")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Series Books: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Series Books")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Young Adult Hardcover: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Young Adult Hardcover")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Audio Fiction: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Audio Fiction")}</SwiperSlide>
+                </Swiper>
+            </div> */
+
+            /* <div className='genre-carousel'>Audio Nonfiction: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Audio Nonfiction")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Business Books: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Business Books")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Graphic Books and Manga: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Graphic Books and Manga")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Mass Market Monthly: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Mass Market Monthly")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Middle Grade Paperback Monthly: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Middle Grade Paperback Monthly")}</SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='genre-carousel'>Young Adult Paperback Monthly: 
+                <Swiper navigation={true} modules={[Navigation]}>
+                    <SwiperSlide>{getBooksByGenre("Young Adult Paperback Monthly")}</SwiperSlide>
+                </Swiper>
+            </div> */
+         
+
+//if filteredBookLists.length !== 0, display filteredBookShelves, else display bookShelves
+        // if (!filteredBookShelves.length)
     )
 }
 

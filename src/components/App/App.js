@@ -5,13 +5,16 @@ import { fetchBookData } from '../../apiCalls'
 import WelcomePage from '../WelcomePage/WelcomePage'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 import Dashboard from '../Dashboard/Dashboard'
-import BookDetails from '../BookDetails/BookDetails'
+// import BookDetails from '../BookDetails/BookDetails'
+import SavedBooksContainer from '../SavedBooksContainer/SavedBooksContainer'
 
 class App extends Component {
   constructor() {
     super()
     this.state={
       bookLists: [],
+      filteredBookLists: [],
+      savedBooks: [],
       error: false,
     }
   }
@@ -19,7 +22,7 @@ class App extends Component {
   componentDidMount = () => {
     fetchBookData()
     .then((data) => {
-      // console.log('App.js data.results.lists: ', data.results.lists)
+      console.log('App.js data.results.lists: ', data.results.lists)
       this.setState({ bookLists: data.results.lists })
     })
     .catch((error) => {
@@ -28,16 +31,41 @@ class App extends Component {
     })
   }
 
+  filteredBooks = (genre) => {
+    const filtered = this.state.bookLists.filter(bookList => {
+      // console.log('bookList: ', bookList)
+      return bookList.list_name === genre
+    })
+      this.setState({ filteredBookLists: filtered })
+      console.log('this.state.filteredBookList: ', this.state.filteredBookLists)
+  }
+
+  saveBook = (uri) => {
+    const allBooks = this.state.bookLists.map(bookList => bookList.books).flat()
+      const foundBook = allBooks.find(book => book.book_uri === uri)
+      // console.log('book.book_uri: ', book.book_uri)
+      // console.log('allBooks: ', allBooks)
+      console.log('foundBook: ', foundBook)
+      this.setState({savedBooks: [...this.state.savedBooks, foundBook]})
+  }
+
   render() {
     return (
       <>
         {this.state.error ? <div><ErrorMessage /></div> : 
         <>
-          <main>
+          <nav>
             <Route exact path="/" render={() => <WelcomePage />} />
-              <Route exact path="/Dashboard" render={() => <Dashboard bookLists={this.state.bookLists}/>} />
-              <Route exact path="/BookDetails" render={() => <BookDetails />} />
-          </main>
+
+            <Route exact path="/Dashboard" render={() => <Dashboard 
+              bookLists={this.state.bookLists} 
+              filteredBooks={this.filteredBooks}
+              filteredBookLists={this.state.filteredBookLists}
+              saveBook={this.saveBook}
+              />} />
+
+            <Route exact path="/SavedBooksSection" render={() => <SavedBooksContainer savedBooks={this.state.savedBooks}/>} />
+          </nav>
         </>
         }
       </>
