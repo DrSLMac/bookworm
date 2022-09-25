@@ -11,7 +11,7 @@ const Dashboard = ({bookLists, filteredBookLists, filteredBooks, saveBook }) => 
         <div>
             <Header />
             <div className="dashboard-view">
-                    <NavBar bookLists={bookLists} filteredBooks={filteredBooks}/>
+                    <NavBar className="navbar-container" bookLists={bookLists} filteredBooks={filteredBooks}/>
                     <BookGallery 
                         bookLists={bookLists} 
                         filteredBookLists={filteredBookLists}
