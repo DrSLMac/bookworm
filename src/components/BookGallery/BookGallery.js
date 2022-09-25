@@ -28,10 +28,10 @@ const BookGallery = ({bookLists, filteredBookLists, saveBook}) => {
         })
         return filteredBookSet
     })
-    console.log('filteredBookShelves: ', filteredBookShelves)
+    // console.log('filteredBookShelves: ', filteredBookShelves)
 
     const genres = Object.keys(bookShelves)
-    console.log('genres: ', genres)
+    // console.log('genres: ', genres)
     const allBooks = genres.map(genre => {
         const readingMaterial = bookShelves[genre].map((book) => {
             const { author, title, book_image, book_uri, rank, description, publisher } = book
@@ -50,6 +50,7 @@ const BookGallery = ({bookLists, filteredBookLists, saveBook}) => {
         })
         return readingMaterial
     })
+    console.log('allBooks: ', allBooks)
 
 return (
         <section className='bookgallery-container'>

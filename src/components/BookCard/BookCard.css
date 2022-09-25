@@ -1,5 +1,12 @@
+.book-container {
+	text-align: center;
+	border: .5px solid grey;
+	border-radius: 16px;
+}
+
 .book-card {
-	margin: 4em;
+	margin: 3em;
+	margin-bottom: 2em;
 	width: 240px;
   height: 300px;
 	/* background: #e0e1dc; */
@@ -106,3 +113,8 @@
 	margin-top: .8vh;
 	margin-bottom: .2vh;
   }
+
+.save-button {
+	margin-bottom: 1em;
+	margin-top: 0;
+}

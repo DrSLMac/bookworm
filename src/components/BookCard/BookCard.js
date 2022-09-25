@@ -6,7 +6,7 @@ const BookCard = ({ author, title, bookCover, id, genre, rank, publisher, descri
     // console.log('id: ', id)
     // console.log('bookCover: ', bookCover)
     return (
-        <section>
+        <section className='book-container'>
             <article className='book-card'>
                 <div className="book-image-container">
                     <img className="book-image" src={bookCover} alt='book cover'/>
@@ -20,8 +20,8 @@ const BookCard = ({ author, title, bookCover, id, genre, rank, publisher, descri
                     <p className='description'>Description: {description}</p>
                     <p className='info-publishing'>Publisher: {publisher}</p>
                 </div>
-                    <button onClick={() => saveBook(id)}>Save</button>
             </article>
+                    <button className="save-button" onClick={() => saveBook(id)}>Save</button>
         </section>
     )
 }
