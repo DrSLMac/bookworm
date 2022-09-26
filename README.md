@@ -74,7 +74,7 @@ Future features could include:
 - Ability to mark a book as 'read'
 
 ## Deployed Page
-Visit the published site [here](https://DrSLMac.github.io/Bookworm/)
+Visit the published site [here](https://drslmac.github.io/bookworm/)
 
 ## Set Up
 1. Fork this repo
