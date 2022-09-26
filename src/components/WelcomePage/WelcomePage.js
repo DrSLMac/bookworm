@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import './WelcomePage.css'
 import background from '../../assets/bookshelves-and-plants.png'
 import WelcomeHeader from './WelcomeHeader'
-// import Dashboard from '../Dashboard/Dashboard'
 
 const WelcomePage = () => {
     return (

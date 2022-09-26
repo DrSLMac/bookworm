@@ -54,5 +54,3 @@ describe('App', () => {
       .get('.error-message').should('contain.text', 'What do you call 2000 mockingbirds?')
   })
 })
-
-{/* <img class="book-image" src="https://storage.googleapis.com/du-prd/books/images/9780735219090.jpg" alt="book cover"> */}

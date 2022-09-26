@@ -6,8 +6,6 @@ import BookGallery from '../BookGallery/BookGallery'
 import PropTypes from 'prop-types';
 
 const Dashboard = ({bookLists, filteredBookLists, filteredBooks, saveBook }) => {
-    // console.log('saveBook: ', saveBook)
-    console.log('filtered books in dashboard: ', filteredBookLists)
     return (
         <div>
             <Header />
