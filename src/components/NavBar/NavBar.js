@@ -14,7 +14,7 @@ const NavBar = ({filteredBooks}) => {
         </NavLink>
         <div></div>
         <NavLink to='/SavedBooksSection' >
-            SavedBooksSection
+            Saved Books Section
         </NavLink>
 
         <Form filteredBooks={filteredBooks} />
