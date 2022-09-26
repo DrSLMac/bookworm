@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './Form.css'
+import PropTypes from 'prop-types';
 
 class Form extends Component {
     constructor() {
@@ -53,7 +54,6 @@ class Form extends Component {
 
 export default Form
 
-
-
-
-
+Form.propTypes = {
+    filteredBooks: PropTypes.func
+}

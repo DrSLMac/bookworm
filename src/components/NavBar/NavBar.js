@@ -2,6 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import Form from '../Form/Form'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const NavBar = ({filteredBooks}) => {
 
@@ -13,7 +14,7 @@ const NavBar = ({filteredBooks}) => {
             Back to the Dashboard
         </NavLink>
         <div></div>
-        <NavLink to='/SavedBooksSection' >
+        <NavLink className="saved-book-navigation" to='/SavedBooksSection' >
             Saved Books Section
         </NavLink>
 
@@ -23,3 +24,7 @@ const NavBar = ({filteredBooks}) => {
 }
 
 export default NavBar
+
+NavBar.propTypes = {
+    filteredBooks: PropTypes.func
+}
