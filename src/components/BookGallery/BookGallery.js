@@ -1,6 +1,7 @@
 import React from 'react'
 import './BookGallery.css'
 import BookCard from '../BookCard/BookCard'
+import PropTypes from 'prop-types';
 
 const BookGallery = ({bookLists, filteredBookLists, saveBook}) => {
     const bookShelves = bookLists.reduce((object, currentList) => {
@@ -62,21 +63,8 @@ return (
 
 export default BookGallery
 
-// Combined Print and E-Book Fiction
-// Combined Print and E-Book Nonfiction
-// Hardcover Fiction
-// Hardcover Nonfiction
-// Trade Fiction Paperback
-// Paperback Nonfiction
-// Advice How-To and Miscellaneous
-// Childrens Middle Grade Hardcover
-// Picture Books
-// Series Books
-// Young Adult Hardcover
-// Audio Fiction
-// Audio Nonfiction
-// Business Books
-// Graphic Books and Manga
-// Mass Market Monthly
-// Middle Grade Paperback Monthly
-// Young Adult Paperback Monthly
+BookGallery.propTypes = {
+    bookLists: PropTypes.arrayOf(PropTypes.object),
+    filteredBookLists: PropTypes.arrayOf(PropTypes.object),
+    saveBook: PropTypes.func.isRequired
+}

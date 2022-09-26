@@ -1,10 +1,8 @@
 import React from 'react'
 import './BookCard.css'
+import PropTypes from 'prop-types';
 
 const BookCard = ({ author, title, bookCover, id, genre, rank, publisher, description, saveBook }) => {
-    // console.log('saveBook in bookCard: ', saveBook )
-    // console.log('id: ', id)
-    // console.log('bookCover: ', bookCover)
     return (
         <section className='book-container'>
             <article className='book-card'>
@@ -28,10 +26,16 @@ const BookCard = ({ author, title, bookCover, id, genre, rank, publisher, descri
 
 export default BookCard
 
-//author
-//book_image
-//description
-//title
-//list-name(genre)
+BookCard.propTypes = {
+    author: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    bookCover: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    genre: PropTypes.string,
+    rank: PropTypes.number.isRequired,
+    publisher: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    saveBook: PropTypes.func
+}
 
 

@@ -1,9 +1,7 @@
 import { Component } from 'react'
 import { fetchBookDetails } from '../../apiCalls'
 import './BookDetails.css'
-//need home button
-//need back to search button
-//need functions to fetch data
+import PropTypes from 'prop-types';
 
 class BookDetails extends Component {
     constructor({ id, title, author, book_image, description, list_name }) {
@@ -30,3 +28,12 @@ class BookDetails extends Component {
 }
 
 export default BookDetails
+
+BookDetails.propTypes = {
+    id: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
+    book_image: PropTypes.string,
+    description: PropTypes.string,
+    list_name: PropTypes.string
+}

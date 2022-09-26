@@ -3,6 +3,7 @@ import './SavedBooksContainer.css'
 import BookCard from '../BookCard/BookCard'
 import Header from '../Header/Header'
 import NavBar from '../NavBar/NavBar'
+import PropTypes from 'prop-types';
 
 const SavedBooksContainer = ({ savedBooks }) => {
     console.log('savedBooks: ', savedBooks)
@@ -39,3 +40,7 @@ const SavedBooksContainer = ({ savedBooks }) => {
 
 
 export default SavedBooksContainer
+
+SavedBooksContainer.propTypes = {
+    savedBooks: PropTypes.arrayOf(PropTypes.object)
+}
