@@ -15,7 +15,6 @@
     text-align: center;
 }
 .welcome-bookworm-img {
-    /* top: 0; */
     background-color: transparent;
     position: absolute;
     z-index: 1;

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css'
 import { fetchBookData } from '../../apiCalls'
 import WelcomePage from '../WelcomePage/WelcomePage'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 import Dashboard from '../Dashboard/Dashboard'
-// import BookDetails from '../BookDetails/BookDetails'
 import SavedBooksContainer from '../SavedBooksContainer/SavedBooksContainer'
 
 class App extends Component {
@@ -22,7 +21,6 @@ class App extends Component {
   componentDidMount = () => {
     fetchBookData()
     .then((data) => {
-      console.log('App.js data.results.lists: ', data.results.lists)
       this.setState({ bookLists: data.results.lists })
     })
     .catch((error) => {
@@ -36,13 +34,11 @@ class App extends Component {
       return bookList.list_name === genre
     })
       this.setState({ filteredBookLists: filtered })
-      console.log('this.state.filteredBookList: ', this.state.filteredBookLists)
   }
 
   saveBook = (uri) => {
     const allBooks = this.state.bookLists.map(bookList => bookList.books).flat()
       const foundBook = allBooks.find(book => book.book_uri === uri)
-      console.log('foundBook: ', foundBook)
       this.setState({savedBooks: [...this.state.savedBooks, foundBook]})
   }
 

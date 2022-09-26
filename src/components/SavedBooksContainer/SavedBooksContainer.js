@@ -6,9 +6,7 @@ import NavBar from '../NavBar/NavBar'
 import PropTypes from 'prop-types';
 
 const SavedBooksContainer = ({ savedBooks }) => {
-    console.log('savedBooks: ', savedBooks)
     const savedBookShelf = savedBooks.map(favoriteBook => {
-        console.log('favoriteBook: ', favoriteBook)
             const { author, title, book_image, book_uri, rank, description, publisher } = favoriteBook
                         return <BookCard 
                             key={Math.random()}
