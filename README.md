@@ -13,10 +13,12 @@
 - [Project Specs](#project-specs)
 
 ## Introduction
-- The purpose of the project was to implement a React framework, utilize React Router, and perform End-to-End testing using Cypress. 
+- Welcome to Bookworm, the app that remembers the book for you. Browse through the lists from the New York Times Bestsellers, filter by genre or view them all. Hover over a book to see more details, such as author, publisher, and description. Save books that sound interesting so that your list is ready the next time you are at the library, bookstore or online, you'll never have to wonder which book you wanted to read next.
+- This is the final showcase solo project for Module 3 of [Turing School of Software and Design](https://turing.edu/). 
+- The purpose of the project was to create a React act from the ground up, in a week. This application utilizes React Router and performs End-to-End testing using Cypress. 
 
 ## Learning Goals
-Use the technology you’ve been working with over the course of the module to demonstrate mastery of the following:
+Use the technology we have been working with over the course of the module to demonstrate mastery of the following:
 - React
 - Router
 - Asynchronous JavaScript
@@ -36,30 +38,40 @@ Use the technology you’ve been working with over the course of the module to d
 - GitHub Issues
 
 ## Illustrations and Demo
-#### Login Page
-
+#### Welcome Page
+![welcome-page](https://user-images.githubusercontent.com/102887963/192186417-c4231b5e-6620-4c41-9d4d-48a497fe68ee.gif)
 
 ----
 #### Dashboard View
+![dashboard](https://user-images.githubusercontent.com/102887963/192186245-5048829a-8a33-45e0-bb0e-7b3f038e8511.gif)
 
 ----
 #### Filter Feature
+![filter](https://user-images.githubusercontent.com/102887963/192186811-977bddf9-215a-4c63-a9a4-c8cee71cd0bb.gif)
 
 ----
-#### Single Book Details View
+#### Saved Books View
+![save-book](https://user-images.githubusercontent.com/102887963/192188144-608e4c87-705f-490d-ba80-9f3c4981d955.gif)
 
 ----
 
 ## Project Reflections
 #### Wins
-- 
+- Loved designing the CSS animation for the book covers
+- Built the welcome page to navigate to dashboard
+- Built a project in one week
 
 #### Challenges
-- 
+- The E2E testing with Cypress was challenging
+- Attempted to implement a carousel for each book genre, but ran out of time to continue with the styling
+- The time constraint was challenging overall
 
 ## Roadmap
 Future features could include:
+- Option for user to sign in to unique account
+- Ability for user to make comments or take notes about a book, maybe even have a writing prompt for each book.
 - Option to join book/reading challenges
+- Ability to mark a book as 'read'
 
 ## Deployed Page
 Visit the published site [here](https://DrSLMac.github.io/Bookworm/)
